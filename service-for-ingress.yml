@@ -1,0 +1,46 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: wakashiyo-development
+  name: w-d-np1
+spec:
+  selector:
+    app: nginx-1
+  type: NodePort
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 8080
+    targetPort: 80
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: wakashiyo-development
+  name: w-d-np2
+spec:
+  selector:
+    app: nginx-2
+  type: NodePort
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 8080
+    targetPort: 80
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: wakashiyo-development
+  name: w-d-np3
+spec:
+  selector:
+    app: nginx-3
+  type: NodePort
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 8080
+    targetPort: 80

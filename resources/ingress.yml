@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  namespace: wakashiyo-development
+  name: wakashiyo-dev-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: wakashiyo-dev-service
+              servicePort: 8080
+    
+                

@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  namespace: wakashiyo-development
+  name: w-d-ig
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /path1/*
+            backend:
+                serviceName: w-d-np1
+                servicePort: 8080
+          - path: /path2/*
+            backend:
+                serviceName: w-d-np2
+                servicePort: 8080
+          - path: /path3/*
+            backend:
+                serviceName: w-d-np3
+                servicePort: 8080

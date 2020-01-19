@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  namespace: wakashiyo-development
+  name: wakashiyo-dev-nginx-limitrange
+spec:
+  limits:
+    - type: Container
+      default:
+        memory: 300Mi
+        cpu: 200m
+      defaultRequest:
+        memory: 200Mi
+        cpu: 100m
+      max:
+        memory: 500Mi
+        cpu: 500m
+      min:
+        memory: 50Mi
+        cpu: 50m
+      maxLimitRequestRatio:
+        memory: "1.5"
+        cpu: "1.5"

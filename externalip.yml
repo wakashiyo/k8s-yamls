@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: wakashiyo-development
+  name: wakashiyo-dev-clusterip
+spec:
+  selector:
+    app: nginx
+  type: ClusterIP
+  # kubectl get nodes -o custom-columns="NAME:{metadata.name},IP:{status.addresses[].address}"
+  externalIPs:
+    - 10.146.0.16
+  ports:
+  - name: "http-port"
+    port:  8080
+    targetPort:  80
+# It did not work

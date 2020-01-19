@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: wakashiyo-development
+  name: wakashiyo-dev-nodeport
+spec:
+  selector:
+    app: nginx
+  type: NodePort
+  ports:
+  - name: http-port
+    port: 8080
+    targetPort: 80
+    nodePort: 30080
