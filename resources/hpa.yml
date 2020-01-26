@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  namespace: wakashiyo-development
+  namespace: wakashiyo
   name: wakashiyo-dev-hpa
 spec:
   scaleTargetRef:
@@ -11,7 +11,7 @@ spec:
   minReplicas: 1
   maxReplicas: 10
   metrics:
-  - type: Resource
-    resource:
+    - type: Resource
+      resource:
         name: cpu
-        targetAverageUtilization: 60
+        targetAverageUtilization: 30

@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  namespace: wakashiyo-development
+  namespace: wakashiyo
   name: wakashiyo-dev-ingress
 spec:
   rules:
@@ -11,5 +11,3 @@ spec:
             backend:
               serviceName: wakashiyo-dev-service
               servicePort: 8080
-    
-                

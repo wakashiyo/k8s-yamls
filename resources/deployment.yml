@@ -1,27 +1,27 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  namespace: wakashiyo-development
+  namespace: wakashiyo
   name: wakashiyo-dev-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx  
+      app: nginx
   template:
     metadata:
       labels:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.12
-        ports:
-          - containerPort: 80
-        resources:
-          requests:
-            memory: 200Mi
-            cpu: 100m
-          limits:
-            memory: 500Mi
-            cpu: 200m
+        - name: nginx
+          image: nginx:1.12
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 50Mi
+              cpu: 5m
+            limits:
+              memory: 75Mi
+              cpu: 10m
