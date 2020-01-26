@@ -47,12 +47,12 @@ data:
           params:
             nodeResourceUtilizationThresholds:
               thresholds:
-                "cpu" : 0
-                "memory": 0
-                "pods": 0
-              targetThresholds:
                 "cpu" : 10
                 "memory": 10
+                "pods": 0
+              targetThresholds:
+                "cpu" : 25
+                "memory": 25
                 "pods": 5
 kind: ConfigMap
 metadata:

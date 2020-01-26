@@ -23,6 +23,8 @@ spec:
               "/bin/descheduler",
               "--policy-config-file",
               "/policy-dir/policy.yaml",
+              "-v",
+              "1",
             ]
       restartPolicy: "Never"
       serviceAccountName: descheduler-sa

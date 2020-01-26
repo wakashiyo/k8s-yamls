@@ -2,10 +2,9 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   namespace: wakashiyo
-  name: wakashiyo-dev-deployment
+  name: cpu-over-pods
 spec:
-  # replicas: 1
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -21,8 +20,8 @@ spec:
             - containerPort: 80
           resources:
             requests:
-              memory: 75Mi
-              cpu: 75m
+              memory: 50Mi
+              cpu: 1m
             limits:
               memory: 100Mi
-              cpu: 100m
+              cpu: 5m
