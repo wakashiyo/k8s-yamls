@@ -17,6 +17,6 @@ data:
               "memory": 20
               "pods": 5
             targetThresholds:
-              "cpu" : 70
+              "cpu" : 50
               "memory": 20
-              "pods": 7
+              "pods": 5
