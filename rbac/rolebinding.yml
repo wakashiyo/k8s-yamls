@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: RoleBinding
+metadata:
+  name: sample-role-binding
+  namespace: wakashiyo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: sample-role
+subjects:
+  - kind: ServiceAccount
+    name: sample
+    namespace: wakashiyo
+  # - kind: ServiceAccount
+  #   name: sample2
+  #   namespace: wakashiyo

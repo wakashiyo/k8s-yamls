@@ -1,0 +1,18 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: sample-role
+  namespace: wakashiyo
+rules:
+  # - apiGroups: [""]
+  #   resources: ["pods"]
+  #   verbs: ["create", "delete"]
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list"]
+  # - apiGroups: ["apps", "extensions"]
+  #   resources: ["deployments"]
+  #   verbs: ["get"]
+  # - apiGroups: ["apps", "extensions"]
+  #   resources: ["deployments/scale"]
+  #   verbs: ["patch"]

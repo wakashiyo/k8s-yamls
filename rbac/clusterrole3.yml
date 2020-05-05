@@ -1,0 +1,10 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: sample-cluster-role3
+  labels:
+    app: sample-role
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["create"]
